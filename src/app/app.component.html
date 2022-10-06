@@ -1,0 +1,16 @@
+<header>
+  <button (click)="search()">
+    Random Waifu
+  </button>
+  <button class="on" (click)="nfw()" [ngClass]="{'off': fs === false}">
+    NSFW {{text}}
+  </button>
+  <button class="on" (click)="sfws()" [ngClass]="{'off': fs === true}">
+    SFW {{sfw}}
+  </button>
+</header>
+<main>
+  <a target="_blank" href="{{response.url}}">
+    <img src="{{response.url}}" alt="">
+  </a>
+</main>
